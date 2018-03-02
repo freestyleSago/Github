@@ -57,3 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
+.vs
+Github.UWP/Github.Services/bin
+Github.UWP/Github.Services/obj
+Github.UWP/Github.UI/bin
+Github.UWP/Github.UI/obj
+Github.UWP/Github.Services/bin
+Github.UWP/Github.ViewModel/obj
+

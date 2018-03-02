@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{3EB69B6B-CE9E-4D4C-AAB4-36EF300042B9}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Github.UI</RootNamespace>
+    <AssemblyName>Github.UI</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>Github.UI_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Github.UI_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Icons\code-fork.png" />
+    <Content Include="Assets\Icons\Language\actionscript.png" />
+    <Content Include="Assets\Icons\Language\android.png" />
+    <Content Include="Assets\Icons\Language\angular.png" />
+    <Content Include="Assets\Icons\Language\apache.png" />
+    <Content Include="Assets\Icons\Language\applescript.png" />
+    <Content Include="Assets\Icons\Language\arduino.png" />
+    <Content Include="Assets\Icons\Language\audio.png" />
+    <Content Include="Assets\Icons\Language\autoit.png" />
+    <Content Include="Assets\Icons\Language\babel.png" />
+    <Content Include="Assets\Icons\Language\binary.png" />
+    <Content Include="Assets\Icons\Language\blade.png" />
+    <Content Include="Assets\Icons\Language\bower.png" />
+    <Content Include="Assets\Icons\Language\brunch.png" />
+    <Content Include="Assets\Icons\Language\c-h.png" />
+    <Content Include="Assets\Icons\Language\c.png" />
+    <Content Include="Assets\Icons\Language\cake.png" />
+    <Content Include="Assets\Icons\Language\cakephp.png" />
+    <Content Include="Assets\Icons\Language\certificate.png" />
+    <Content Include="Assets\Icons\Language\cfc.png" />
+    <Content Include="Assets\Icons\Language\cfm.png" />
+    <Content Include="Assets\Icons\Language\clojure.png" />
+    <Content Include="Assets\Icons\Language\cmake.png" />
+    <Content Include="Assets\Icons\Language\codekit.png" />
+    <Content Include="Assets\Icons\Language\coffeescript.png" />
+    <Content Include="Assets\Icons\Language\coldfusion.png" />
+    <Content Include="Assets\Icons\Language\contributing.png" />
+    <Content Include="Assets\Icons\Language\cpp-h.png" />
+    <Content Include="Assets\Icons\Language\cpp.png" />
+    <Content Include="Assets\Icons\Language\csharp.png" />
+    <Content Include="Assets\Icons\Language\css.png" />
+    <Content Include="Assets\Icons\Language\dart.png" />
+    <Content Include="Assets\Icons\Language\database.png" />
+    <Content Include="Assets\Icons\Language\default.png" />
+    <Content Include="Assets\Icons\Language\dlang.png" />
+    <Content Include="Assets\Icons\Language\docker.png" />
+    <Content Include="Assets\Icons\Language\dust.png" />
+    <Content Include="Assets\Icons\Language\editorconfig.png" />
+    <Content Include="Assets\Icons\Language\ejs.png" />
+    <Content Include="Assets\Icons\Language\elixir.png" />
+    <Content Include="Assets\Icons\Language\elm.png" />
+    <Content Include="Assets\Icons\Language\erlang.png" />
+    <Content Include="Assets\Icons\Language\eslint.png" />
+    <Content Include="Assets\Icons\Language\excel.png" />
+    <Content Include="Assets\Icons\Language\exe.png" />
+    <Content Include="Assets\Icons\Language\favicon.png" />
+    <Content Include="Assets\Icons\Language\file.png" />
+    <Content Include="Assets\Icons\Language\fish.png" />
+    <Content Include="Assets\Icons\Language\folder-bower-outline.png" />
+    <Content Include="Assets\Icons\Language\folder-bower.png" />
+    <Content Include="Assets\Icons\Language\folder-git-outline.png" />
+    <Content Include="Assets\Icons\Language\folder-git.png" />
+    <Content Include="Assets\Icons\Language\folder-jest-outline.png" />
+    <Content Include="Assets\Icons\Language\folder-jest.png" />
+    <Content Include="Assets\Icons\Language\folder-node-outline.png" />
+    <Content Include="Assets\Icons\Language\folder-node.png" />
+    <Content Include="Assets\Icons\Language\folder-outline.png" />
+    <Content Include="Assets\Icons\Language\folder-root-outline.png" />
+    <Content Include="Assets\Icons\Language\folder-root.png" />
+    <Content Include="Assets\Icons\Language\folder-tests-outline.png" />
+    <Content Include="Assets\Icons\Language\folder-tests.png" />
+    <Content Include="Assets\Icons\Language\folder-vsc-outline.png" />
+    <Content Include="Assets\Icons\Language\folder-vsc.png" />
+    <Content Include="Assets\Icons\Language\folder.png" />
+    <Content Include="Assets\Icons\Language\font.png" />
+    <Content Include="Assets\Icons\Language\fsharp.png" />
+    <Content Include="Assets\Icons\Language\gherkin.png" />
+    <Content Include="Assets\Icons\Language\git.png" />
+    <Content Include="Assets\Icons\Language\gitlab.png" />
+    <Content Include="Assets\Icons\Language\go.png" />
+    <Content Include="Assets\Icons\Language\gradle.png" />
+    <Content Include="Assets\Icons\Language\graphql.png" />
+    <Content Include="Assets\Icons\Language\graphviz.png" />
+    <Content Include="Assets\Icons\Language\grunt.png" />
+    <Content Include="Assets\Icons\Language\gulp.png" />
+    <Content Include="Assets\Icons\Language\haml.png" />
+    <Content Include="Assets\Icons\Language\handlebars.png" />
+    <Content Include="Assets\Icons\Language\haskell.png" />
+    <Content Include="Assets\Icons\Language\haxe.png" />
+    <Content Include="Assets\Icons\Language\html.png" />
+    <Content Include="Assets\Icons\Language\illustrator.png" />
+    <Content Include="Assets\Icons\Language\image.png" />
+    <Content Include="Assets\Icons\Language\jade.png" />
+    <Content Include="Assets\Icons\Language\java.png" />
+    <Content Include="Assets\Icons\Language\javascript.png" />
+    <Content Include="Assets\Icons\Language\jenkinsfile.png" />
+    <Content Include="Assets\Icons\Language\jest.png" />
+    <Content Include="Assets\Icons\Language\json.png" />
+    <Content Include="Assets\Icons\Language\json5.png" />
+    <Content Include="Assets\Icons\Language\julia.png" />
+    <Content Include="Assets\Icons\Language\karma.png" />
+    <Content Include="Assets\Icons\Language\key.png" />
+    <Content Include="Assets\Icons\Language\less.png" />
+    <Content Include="Assets\Icons\Language\liquid.png" />
+    <Content Include="Assets\Icons\Language\lua.png" />
+    <Content Include="Assets\Icons\Language\markdown.png" />
+    <Content Include="Assets\Icons\Language\markojs.png" />
+    <Content Include="Assets\Icons\Language\markup.png" />
+    <Content Include="Assets\Icons\Language\matlab-red.png" />
+    <Content Include="Assets\Icons\Language\matlab.png" />
+    <Content Include="Assets\Icons\Language\mjml.png" />
+    <Content Include="Assets\Icons\Language\mocha.png" />
+    <Content Include="Assets\Icons\Language\mustache.png" />
+    <Content Include="Assets\Icons\Language\nginx.png" />
+    <Content Include="Assets\Icons\Language\node.png" />
+    <Content Include="Assets\Icons\Language\npm.png" />
+    <Content Include="Assets\Icons\Language\nsis.png" />
+    <Content Include="Assets\Icons\Language\nuget.png" />
+    <Content Include="Assets\Icons\Language\nunjucks.png" />
+    <Content Include="Assets\Icons\Language\ocaml.png" />
+    <Content Include="Assets\Icons\Language\opengl.png" />
+    <Content Include="Assets\Icons\Language\paket.png" />
+    <Content Include="Assets\Icons\Language\pdf.png" />
+    <Content Include="Assets\Icons\Language\perl.png" />
+    <Content Include="Assets\Icons\Language\phalcon.png" />
+    <Content Include="Assets\Icons\Language\photoshop.png" />
+    <Content Include="Assets\Icons\Language\php.png" />
+    <Content Include="Assets\Icons\Language\postcss.png" />
+    <Content Include="Assets\Icons\Language\powerpoint.png" />
+    <Content Include="Assets\Icons\Language\powershell.png" />
+    <Content Include="Assets\Icons\Language\prettier.png" />
+    <Content Include="Assets\Icons\Language\pug.png" />
+    <Content Include="Assets\Icons\Language\puppet.png" />
+    <Content Include="Assets\Icons\Language\python.png" />
+    <Content Include="Assets\Icons\Language\raml.png" />
+    <Content Include="Assets\Icons\Language\razor.png" />
+    <Content Include="Assets\Icons\Language\react.png" />
+    <Content Include="Assets\Icons\Language\readme.png" />
+    <Content Include="Assets\Icons\Language\rlang.png" />
+    <Content Include="Assets\Icons\Language\rollup.png" />
+    <Content Include="Assets\Icons\Language\rstudio.png" />
+    <Content Include="Assets\Icons\Language\ruby.png" />
+    <Content Include="Assets\Icons\Language\rust.png" />
+    <Content Include="Assets\Icons\Language\sass.png" />
+    <Content Include="Assets\Icons\Language\scala.png" />
+    <Content Include="Assets\Icons\Language\server.png" />
+    <Content Include="Assets\Icons\Language\settings.png" />
+    <Content Include="Assets\Icons\Language\shell.png" />
+    <Content Include="Assets\Icons\Language\slim.png" />
+    <Content Include="Assets\Icons\Language\smarty.png" />
+    <Content Include="Assets\Icons\Language\solidity.png" />
+    <Content Include="Assets\Icons\Language\source.png" />
+    <Content Include="Assets\Icons\Language\stylus.png" />
+    <Content Include="Assets\Icons\Language\sublime.png" />
+    <Content Include="Assets\Icons\Language\svg.png" />
+    <Content Include="Assets\Icons\Language\swift.png" />
+    <Content Include="Assets\Icons\Language\tcl.png" />
+    <Content Include="Assets\Icons\Language\test.png" />
+    <Content Include="Assets\Icons\Language\testjs.png" />
+    <Content Include="Assets\Icons\Language\tex.png" />
+    <Content Include="Assets\Icons\Language\textile.png" />
+    <Content Include="Assets\Icons\Language\todo.png" />
+    <Content Include="Assets\Icons\Language\twig.png" />
+    <Content Include="Assets\Icons\Language\typescript-old.png" />
+    <Content Include="Assets\Icons\Language\typescript.png" />
+    <Content Include="Assets\Icons\Language\unity.png" />
+    <Content Include="Assets\Icons\Language\url.png" />
+    <Content Include="Assets\Icons\Language\video.png" />
+    <Content Include="Assets\Icons\Language\visualstudio.png" />
+    <Content Include="Assets\Icons\Language\visualstudiocode-nb.png" />
+    <Content Include="Assets\Icons\Language\visualstudiocode.png" />
+    <Content Include="Assets\Icons\Language\vue.png" />
+    <Content Include="Assets\Icons\Language\webpack.png" />
+    <Content Include="Assets\Icons\Language\word.png" />
+    <Content Include="Assets\Icons\Language\xaml.png" />
+    <Content Include="Assets\Icons\Language\yaml.png" />
+    <Content Include="Assets\Icons\Language\yarn.png" />
+    <Content Include="Assets\Icons\Language\zephir.png" />
+    <Content Include="Assets\Icons\Language\zip.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.0.6</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
